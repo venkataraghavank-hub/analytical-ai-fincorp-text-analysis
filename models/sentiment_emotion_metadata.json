@@ -1,0 +1,47 @@
+{
+  "sentiment": {
+    "model_name": "Logistic Regression",
+    "classes": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "test_metrics": {
+      "accuracy": 0.712314,
+      "macro_precision": 0.651632,
+      "macro_recall": 0.677705,
+      "macro_f1": 0.657309,
+      "weighted_f1": 0.72343
+    },
+    "file": "fincorp_sentiment_pipeline.pkl"
+  },
+  "emotion": {
+    "model_name": "Logistic Regression",
+    "classes": [
+      "anger",
+      "disgust",
+      "fear",
+      "happiness",
+      "other",
+      "sadness",
+      "surprise"
+    ],
+    "test_metrics": {
+      "accuracy": 0.539278,
+      "macro_precision": 0.412601,
+      "macro_recall": 0.415095,
+      "macro_f1": 0.409131,
+      "weighted_f1": 0.558747
+    },
+    "file": "fincorp_emotion_pipeline.pkl"
+  },
+  "input_field": "raw_customer_text",
+  "confidence_threshold": 0.6,
+  "created_utc": "2026-09-21T12:34:14.177345+00:00",
+  "limitations": [
+    "FINCORP social-media language may not generalise to every customer channel.",
+    "Minority emotion classes have fewer training examples.",
+    "Class probabilities are not guaranteed to be calibrated.",
+    "Low-confidence and high-impact cases require human review."
+  ]
+}
